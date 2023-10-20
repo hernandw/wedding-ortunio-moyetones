@@ -27,6 +27,7 @@ img {
   }
 
   .img-home {
+    padding-top: 50px;
     width: 600px;
   }
 
@@ -34,4 +35,5 @@ img {
     font-size: 2rem;
     line-height: 2.5rem;
   }
+
 }
