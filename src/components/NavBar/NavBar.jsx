@@ -1,13 +1,15 @@
 import { Link } from "react-router-dom";
+import logo from '/assets/images/logo.png'
+import './NavBar.css'
 
-const NavBar = () => {
+const NavBar = ({ toggleMenu }) => {
   return (
-    <nav className="flex flex-wrap items-center justify-between p-6 bg-teal-500">
-      <Link to="/" className="text-2xl font-bold text-white">
-        Wedding
+    <nav className="flex flex-wrap items-center justify-between p-2 bg-cyan-600">
+      <Link to="/">
+        <img className="logo" src={logo} alt="" />
       </Link>
 
-      <div className="block md:hidden">
+      <div className="block md:hidden" onClick={toggleMenu}>
         <button className="flex items-center px-3 py-2 text-teal-200 border border-teal-400 rounded hover:text-white hover:border-white">
           <svg
             className="w-3 h-3 fill-current"
@@ -19,15 +21,24 @@ const NavBar = () => {
           </svg>
         </button>
       </div>
-      <div className="items-center hidden space-x-4 md:block">
+      <div className="menu-items items-center hidden space-x-4 md:block px-10">
         <Link to="/" className="text-white hover:text-gray-300">
           Home
         </Link>
-        <Link to="/about" className="text-white hover:text-gray-300">
-          About
+        <Link to="/event" className="text-white hover:text-gray-300">
+          Schedule
         </Link>
-        <Link to="/contact" className="text-white hover:text-gray-300">
-          Contact
+        <Link to="/groomsmen" className="text-white hover:text-gray-300">
+          Wedding Party
+        </Link>
+        <Link to="/gallery" className="text-white hover:text-gray-300">
+          Gallery
+        </Link>
+        <Link to="/faq" className="text-white hover:text-gray-300">
+          FAQs
+        </Link>
+        <Link to="/rsvp" className="text-white hover:text-gray-300">
+          RSVP
         </Link>
       </div>
     </nav>

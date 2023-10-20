@@ -1,16 +1,19 @@
-import Layout from "./components/Layout/Layout";
-import { Routes, Route } from "react-router-dom";
+import manu from '/assets/images/manu1.jpg';
+import './App.css'
 
 
 const App = () => {
   return (
-    <div>
-      <Layout />
-      <Routes>
-        <Route path="/" index element={<h1>Home</h1>} />
-        <Route path="/about" element={<h1>About</h1>} />
-        <Route path="/contact" element={<h1>Contact</h1>} />
-      </Routes>
+    <div className="bg-cyan-200">
+      <div>
+        <img className='img-home' src={manu} alt="" />
+      </div>
+      <div className="pt-12 text-center names">
+        <p>Karina Moyetones</p>
+        <p>&</p>
+        <p>Manuel Ortunio</p>
+      </div>
+      <p className="pt-10 text-center date">March 28, 2024</p>
     </div>
   );
 }

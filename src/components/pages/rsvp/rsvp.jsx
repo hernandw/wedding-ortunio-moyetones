@@ -1,6 +1,6 @@
 
 
-const rsvp = () => {
+const Rsvp = () => {
   return (
     <div>
       <h1>RSVP</h1>
@@ -8,4 +8,4 @@ const rsvp = () => {
   )
 }
 
-export default rsvp
+export default Rsvp
