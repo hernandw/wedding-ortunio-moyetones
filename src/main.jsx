@@ -12,6 +12,39 @@ import Gallery from "./components/pages/Gallery/Gallery.jsx";
 import NotFound from "./components/pages/NotFound/NotFound.jsx";
 import { createHashRouter, RouterProvider } from "react-router-dom";
 
+let slides = [
+  {
+    id: 1,
+    image: "/assets/images/gallery1.jpg",
+    title: "Wedding",
+  },
+  {
+    id: 2,
+    image: "/assets/images/gallery2.jpg",
+    title: "Wedding",
+  },
+  {
+    id: 3,
+    image: "/assets/images/gallery3.jpg",
+    title: "Wedding",
+  },
+  {
+    id: 4,
+    image: "/assets/images/gallery4.jpg",
+    title: "Wedding",
+  },
+  {
+    id: 5,
+    image: "/assets/images/gallery5.jpg",
+    title: "Wedding",
+  },
+  {
+    id: 6,
+    image: "/assets/images/gallery6.jpg",
+    title: "Wedding",
+  }
+];
+
 const router = createHashRouter([
   {
     path: "/",
@@ -40,7 +73,7 @@ const router = createHashRouter([
       },
       {
         path: "/gallery",
-        element: <Gallery />,
+        element: <Gallery slides={slides} />,
       },
       {
         path: "*",
