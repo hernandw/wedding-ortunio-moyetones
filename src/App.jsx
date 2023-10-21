@@ -2,7 +2,7 @@ import './App.css'
 
 const App = () => {
   return (
-    <div className="pt-40">
+    <div className="px-5 pt-40">
       <div className="acceso">
         <p className="p-4">
           por favor ingresa el código que se te entregó en la invitación
