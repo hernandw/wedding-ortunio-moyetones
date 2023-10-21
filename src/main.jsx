@@ -2,7 +2,6 @@ import React, { Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
-
 import Layout from "./components/Layout/Layout.jsx";
 import Event from "./components/pages/Event/Event.jsx";
 import Faq from "./components/pages/faq/Faq.jsx";
@@ -11,7 +10,7 @@ import Rsvp from "./components/pages/rsvp/rsvp.jsx";
 import Gallery from "./components/pages/Gallery/Gallery.jsx";
 import NotFound from "./components/pages/NotFound/NotFound.jsx";
 import { createHashRouter, RouterProvider } from "react-router-dom";
-import './i18n.js'
+import "./i18n.js";
 import Home from "./components/pages/Home/Home.jsx";
 
 let slides = [
@@ -44,10 +43,8 @@ let slides = [
     id: 6,
     image: "/assets/images/gallery6.jpg",
     title: "Wedding",
-  }
+  },
 ];
-
-
 
 const router = createHashRouter([
   {
@@ -56,12 +53,12 @@ const router = createHashRouter([
     children: [
       {
         index: true,
-        element: <App />,
+        element: <Layout />,
       },
       {
         path: "/home",
         element: <Home />,
-    },
+      },
       {
         path: "/event",
         element: <Event />,
@@ -73,7 +70,6 @@ const router = createHashRouter([
       {
         path: "/groomsmen",
         element: <Groomsmen />,
-
       },
       {
         path: "/rsvp",
@@ -86,16 +82,15 @@ const router = createHashRouter([
       {
         path: "*",
         element: <NotFound />,
-      }
-    ]
-  }
-])
+      },
+    ],
+  },
+]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Suspense fallback={<div>Loading...</div>}>
       <RouterProvider router={router} />
     </Suspense>
-    
   </React.StrictMode>
 );

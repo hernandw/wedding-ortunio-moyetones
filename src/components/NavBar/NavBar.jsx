@@ -5,12 +5,9 @@ import es from '/assets/icons/es.png'
 import en from '/assets/icons/en.png'
 import de from '/assets/icons/de.png'
 import { useTranslation } from "react-i18next";
+import PropTypes from "prop-types";
 
-const lngs = {
-  en: { nativeName: 'English' },
-  es: { nativeName: 'Español' },
-  de: { nativeName: 'Deutsch' },
-}
+
 
 const NavBar = ({ toggleMenu }) => {
   const { i18n, t } = useTranslation();
@@ -39,26 +36,30 @@ const NavBar = ({ toggleMenu }) => {
       </div>
       <div className="items-center hidden px-10 space-x-4 menu-items md:block">
         <Link to="/home" className="text-white hover:text-gray-300">
-          {i18n.t('home.home')}
+          {t('home.home')}
         </Link>
         <Link to="/event" className="text-white hover:text-gray-300">
           {i18n.t('home.event')}
         </Link>
         <Link to="/groomsmen" className="text-white hover:text-gray-300">
-          {i18n.t('home.groomsmen')}
+          {t('home.groomsmen')}
         </Link>
         <Link to="/gallery" className="text-white hover:text-gray-300">
-          {i18n.t('home.gallery')}
+          {t('home.gallery')}
         </Link>
         <Link to="/faq" className="text-white hover:text-gray-300">
-          {i18n.t('home.faq')}
+          {t('home.faq')}
         </Link>
         <Link to="/rsvp" className="text-white hover:text-gray-300">
-          {i18n.t('home.rsvp')}
+          {t('home.rsvp')}
         </Link>
       </div>
     </nav>
   );
+}
+
+NavBar.propTypes = {
+  toggleMenu: PropTypes.func.isRequired,
 }
 
 export default NavBar

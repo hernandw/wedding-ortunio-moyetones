@@ -3,14 +3,13 @@ import {
   BsFillArrowRightCircleFill,
   BsFillArrowLeftCircleFill,
 } from "react-icons/bs";
-import './Gallery.css'
+import "./Gallery.css";
 import { useTranslation } from "react-i18next";
-
+import PropTypes from "prop-types";
 
 export default function Gallery({ slides }) {
-  
-  const { t } = useTranslation()
-  
+  const { t } = useTranslation();
+
   let [current, setCurrent] = useState(0);
 
   let previousSlide = () => {
@@ -25,7 +24,9 @@ export default function Gallery({ slides }) {
 
   return (
     <div>
-      <h1 className="pt-20 text-4xl font-bold text-center">{t("gallery.title")}</h1>
+      <h1 className="pt-20 text-4xl font-bold text-center">
+        {t("gallery.title")}
+      </h1>
       <div className="relative overflow-hidden galeria">
         <div
           className={`flex transition ease-out duration-40`}
@@ -66,3 +67,7 @@ export default function Gallery({ slides }) {
     </div>
   );
 }
+
+Gallery.propTypes = {
+  slides: PropTypes.array.isRequired,
+};

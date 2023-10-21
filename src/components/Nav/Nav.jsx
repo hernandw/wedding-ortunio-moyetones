@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import cerrar from "/assets/icons/cerrar.svg";
-import './Nav.css'
+import './Nav.css';
+import PropTypes from "prop-types";
 
 const Nav = ({ setIsOpen }) => {
   const ocultarModal = () => {
@@ -42,5 +43,9 @@ const Nav = ({ setIsOpen }) => {
     </div>
   );
 };
+
+Nav.propTypes = {
+  setIsOpen: PropTypes.func.isRequired
+}
 
 export default Nav
