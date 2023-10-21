@@ -1,5 +1,11 @@
 .galeria {
-    width: 500px;
+    width: 400px;
     margin: 0 auto;
     padding-top: 50px;
+}
+
+@media (min-width: 600px){
+    .galeria{
+        width: 600px;
+    }
 }

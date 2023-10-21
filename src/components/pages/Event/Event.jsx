@@ -27,7 +27,7 @@ const Event = () => {
 
       <p className="date-event">Jueves, 28 de Marzo de 2024</p>
 
-      <h3 className="title_ceremonia">Ceremonia</h3>
+      <h3 className="py-6 title_ceremonia">Ceremonia</h3>
       <p className="text-2xl text-center">2:00 pm - 3:00 pm</p>
       <p className="text-2xl text-center">Osorno Avda Francia 2875</p>
       <p className="text-2xl text-center">Condominio xxxx</p>
@@ -36,7 +36,7 @@ const Event = () => {
         <button className="button">Agregar al Calendar</button>
       </div>
 
-      <h3 className="title_ceremonia">Recepción</h3>
+      <h3 className="py-6 title_ceremonia">Recepción</h3>
       <p className="text-2xl text-center">3:00 pm - 4:00 pm</p>
       <p className="text-2xl text-center">Restaurant xxxx</p>
       <p className="text-2xl text-center">avda no me acuerdo Puerto Varas</p>

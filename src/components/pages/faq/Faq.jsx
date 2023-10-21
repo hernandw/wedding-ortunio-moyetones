@@ -1,9 +1,9 @@
 import  { useState } from "react";
 import AccordionItem from "./AcordionItem";
-import "../../../scss/main.scss";
+/* import "../../../scss/main.scss";
 
 import "../../../scss/main.scss";
-
+ */
 
 const Faq = ({ questionsAnswers }) => {
   const [activeIndex, setActiveIndex] = useState(1);

@@ -1,6 +1,6 @@
 import manu from '/assets/images/manu1.jpg';
 import './App.css'
-import Gallery from './components/pages/Gallery/Gallery';
+
 
 let slides = [
   "https://i.pinimg.com/originals/51/82/ac/5182ac536727d576c78a9320ac62de30.jpg",
@@ -15,8 +15,8 @@ const App = () => {
         <img className="img-home" src={manu} alt="" />
       </div>
       <div className="pt-12 text-center names">
-        <p className="pb-16">Karina Moyetones</p>
-        <p className="pb-16">&</p>
+        <p >Karina Moyetones</p>
+        <p >&</p>
         <p>Manuel Ortunio</p>
       </div>
       <p className="pt-10 text-center date">March 28, 2024</p>
