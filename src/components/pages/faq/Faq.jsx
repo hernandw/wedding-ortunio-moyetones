@@ -29,8 +29,8 @@ const Faq = ({ questionsAnswers }) => {
 
   return (
     <div className="faq">
-      <h1 className="pb-4 text-center">Preguntas Frecuentes</h1>
-      <dl className="faq__list">{renderedQuestionsAnswers}</dl>
+      <h1 className="pt-8 text-3xl font-bold text-center">Preguntas Frecuentes</h1>
+      <dl className="p-4 sm:p-20">{renderedQuestionsAnswers}</dl>
     </div>
   );
 };

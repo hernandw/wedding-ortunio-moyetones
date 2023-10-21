@@ -1,5 +1,6 @@
 import manu from '/assets/images/manu1.jpg';
 import './App.css'
+import { useTranslation } from 'react-i18next';
 
 
 let slides = [
@@ -9,6 +10,8 @@ let slides = [
   "https://getwallpapers.com/wallpaper/full/5/c/0/606489.jpg",
 ];
 const App = () => {
+
+  const {t } = useTranslation()
   return (
     <div className="bg-cyan-200">
       <div>
@@ -19,7 +22,7 @@ const App = () => {
         <p >&</p>
         <p>Manuel Ortunio</p>
       </div>
-      <p className="pt-10 text-center date">March 28, 2024</p>
+      <p className="pt-10 text-center date">{t("home.date")}</p>
     </div>
   );
 }

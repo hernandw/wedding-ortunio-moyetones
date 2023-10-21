@@ -3,6 +3,12 @@
     height: 60px;
 }
 
+.flags {
+    
+  width:  40px;
+  
+}
+
 @media (min-width: 600px) {
     .logo {
         width: 80px;
@@ -12,5 +18,10 @@
     .menu-items {
         font-size: 20px;
         
+    }
+
+    .flags {
+        width:  60px;
+        cursor: pointer;
     }
 }

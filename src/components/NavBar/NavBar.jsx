@@ -1,13 +1,29 @@
 import { Link } from "react-router-dom";
 import logo from '/assets/images/logo.png'
 import './NavBar.css'
+import es from '/assets/icons/es.png'
+import en from '/assets/icons/en.png'
+import de from '/assets/icons/de.png'
+import { useTranslation } from "react-i18next";
+
+const lngs = {
+  en: { nativeName: 'English' },
+  es: { nativeName: 'Español' },
+  de: { nativeName: 'Deutsch' },
+}
 
 const NavBar = ({ toggleMenu }) => {
+  const { i18n, t } = useTranslation();
   return (
     <nav className="flex flex-wrap items-center justify-between p-2 bg-cyan-600">
       <Link to="/">
         <img className="logo" src={logo} alt="" />
       </Link>
+      <div className="flex gap-3 sm:gap-5">
+        <img onClick={()=> i18n.changeLanguage("es")} className="flags" src={es} alt="" />
+        <img onClick={()=> i18n.changeLanguage("en")} className="flags" src={en} alt="" />
+        <img onClick={()=> i18n.changeLanguage("de")} className="flags" src={de} alt="" />
+      </div>
 
       <div className="block md:hidden" onClick={toggleMenu}>
         <button className="flex items-center px-3 py-2 text-teal-200 border border-teal-400 rounded hover:text-white hover:border-white">
@@ -21,24 +37,24 @@ const NavBar = ({ toggleMenu }) => {
           </svg>
         </button>
       </div>
-      <div className="menu-items items-center hidden space-x-4 md:block px-10">
+      <div className="items-center hidden px-10 space-x-4 menu-items md:block">
         <Link to="/" className="text-white hover:text-gray-300">
-          Home
+          {i18n.t('home.home')}
         </Link>
         <Link to="/event" className="text-white hover:text-gray-300">
-          Schedule
+          {i18n.t('home.event')}
         </Link>
         <Link to="/groomsmen" className="text-white hover:text-gray-300">
-          Wedding Party
+          {i18n.t('home.groomsmen')}
         </Link>
         <Link to="/gallery" className="text-white hover:text-gray-300">
-          Gallery
+          {i18n.t('home.gallery')}
         </Link>
         <Link to="/faq" className="text-white hover:text-gray-300">
-          FAQs
+          {i18n.t('home.faq')}
         </Link>
         <Link to="/rsvp" className="text-white hover:text-gray-300">
-          RSVP
+          {i18n.t('home.rsvp')}
         </Link>
       </div>
     </nav>

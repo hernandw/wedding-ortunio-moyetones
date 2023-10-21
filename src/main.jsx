@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
@@ -11,6 +11,7 @@ import Rsvp from "./components/pages/rsvp/rsvp.jsx";
 import Gallery from "./components/pages/Gallery/Gallery.jsx";
 import NotFound from "./components/pages/NotFound/NotFound.jsx";
 import { createHashRouter, RouterProvider } from "react-router-dom";
+import './i18n.js'
 
 let slides = [
   {
@@ -134,6 +135,9 @@ const router = createHashRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Suspense fallback={<div>Loading...</div>}>
+      <RouterProvider router={router} />
+    </Suspense>
+    
   </React.StrictMode>
 );
