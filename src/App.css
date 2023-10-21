@@ -1,42 +1,14 @@
-
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-img {
-  max-width: 100%;
+.acceso {
+  background-color: rgb(220, 245, 244);
+  width: 600px;
+  height: 300px;
+  border: 1px solid black;
   margin: 0 auto;
-}
-
-.date {
-  font-family: "Playfair Display", serif;
-  font-size: 1.5rem;
-  padding-bottom: 30px;
-}
-
-.names {
-  font-family: "Great Vibes", cursive;
-  font-size: 40px;
-}
-
-
-
-@media (min-width: 600px) {
-  .names {
-    font-size: 60px;
-  }
-
-  .img-home {
-    padding-top: 50px;
-    width: 600px;
-  }
-
-  .date {
-    font-size: 2rem;
-    line-height: 2.5rem;
-  }
-
+  border-radius: 10px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
 }

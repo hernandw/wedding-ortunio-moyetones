@@ -12,6 +12,7 @@ import Gallery from "./components/pages/Gallery/Gallery.jsx";
 import NotFound from "./components/pages/NotFound/NotFound.jsx";
 import { createHashRouter, RouterProvider } from "react-router-dom";
 import './i18n.js'
+import Home from "./components/pages/Home/Home.jsx";
 
 let slides = [
   {
@@ -46,54 +47,7 @@ let slides = [
   }
 ];
 
-const questionsAnswers = [
-  {
-    question: "{{t('faq.question1')}}",
-    answer:
-      "{{t('faq.answer1')}}",
-  },
-  {
-    question: "¿Cual es la fecha límite para confirmar mi asistencia?",
-    answer:
-      "hasta el 28 de Febrero de 2024",
-  },
-  {
-    question: "¿Están invitados los niños?",
-    answer: "Le pedimos cortesmente que solo invite niños si se mencionan en su confirmación"
-  },
-  {
-    question: "¿A que hora debo llegar a la Ceremonia?",
-    answer: "Recomendamos llegar al menos 15 minutos antes (1:45 pm)",
-  },
-  {
-    question: "¿Cual es el código de vestimenta?",
-    answer: "Ropa apropiada a una ceremonia"
-  },
-  {
-    question: "¿La Ceremonia y la Recepción serán al aire libre?",
-    answer: "La Ceremonia será en mi casa y la recpción será en el restaurant xxxx"
-  },
-  {
-    question: "¿Cual es el lugar de la Ceremonia?",
-    answer: "La ceremonia será en mi casa"
-  },
-  {
-    question: "¿Cual es el lugar de la Recepción?",
-    answer: "La recén será en el restaurant xxxx"
-  },
-  {
-    question: "¿Puedo tomar fotografías durante la ceremonia y la recepción?",
-    answer: "Eres más que bienvenido a tomar fotografias, pero te pedimos que mantengas al mínimo y tengas en cuenta al fotógrafo/videografo que hemos contratado para capturar momentos."
-  },
-  {
-    question: "¿a qué hora termina la recepción?",
-    answer: "5pm o hasta que el cuerpo y su bolsillo aguante"
-  },
-  {
-    question: "¿Habrá fiesta despues de la recepción?",
-    answer: "No. Despues de la recepción nos iremos al Aeropuerto porque salimos de viaje de luna de miel."
-  }
-];
+
 
 const router = createHashRouter([
   {
@@ -103,6 +57,10 @@ const router = createHashRouter([
       {
         index: true,
         element: <App />,
+      },
+      {
+        path: "/home",
+        element: <Home />,
     },
       {
         path: "/event",
@@ -110,7 +68,7 @@ const router = createHashRouter([
       },
       {
         path: "/faq",
-        element: <Faq questionsAnswers={questionsAnswers} />,
+        element: <Faq />,
       },
       {
         path: "/groomsmen",

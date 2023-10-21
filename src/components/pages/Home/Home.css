@@ -1,0 +1,42 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.date {
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  padding-bottom: 30px;
+}
+
+.names {
+  font-family: "Great Vibes", cursive;
+  font-size: 40px;
+}
+
+
+
+@media (min-width: 600px) {
+  .names {
+    font-size: 60px;
+  }
+
+  .img-home {
+    padding-top: 50px;
+    width: 600px;
+  }
+
+  .date {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+
+}

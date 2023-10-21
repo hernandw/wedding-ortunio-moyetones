@@ -38,7 +38,7 @@ const NavBar = ({ toggleMenu }) => {
         </button>
       </div>
       <div className="items-center hidden px-10 space-x-4 menu-items md:block">
-        <Link to="/" className="text-white hover:text-gray-300">
+        <Link to="/home" className="text-white hover:text-gray-300">
           {i18n.t('home.home')}
         </Link>
         <Link to="/event" className="text-white hover:text-gray-300">
