@@ -36,10 +36,10 @@ const App = () => {
         </div>
       </div>
 
-      <div className="px-5 pt-12 sm:pt-8">
+      <div className="px-5 pt-8 sm:pt-8">
         <div className="text-center names">
           <p>Karina Alejandra Moyetones Bisbal</p>
-          <p className="py-5 sm:py-1">&</p>
+          <p className="py-3 sm:py-1">&</p>
           <p className="px-6">Manuel Alejandro Ortunio Martínez</p>
         </div>
         <div className="acceso">

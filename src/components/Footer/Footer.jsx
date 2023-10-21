@@ -5,7 +5,7 @@ const Footer = () => {
 
     const { t } = useTranslation();
   return (
-    <div className="w-full p-2 mt-10 text-center text-white bg-black">
+    <div className="w-full p-2 mt-10 text-center text-white bg-black lg:absolute lg:bottom-0">
       <p>{t("app.copyright")}</p>
       <p>
         Williams Hernandez -{" "}
