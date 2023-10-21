@@ -48,9 +48,9 @@ let slides = [
 
 const questionsAnswers = [
   {
-    question: "¿Cómo puedo confirmar mi asistencia?",
+    question: "{{t('faq.question1')}}",
     answer:
-      "Mediante el uso del sitio web. En la pestaña Confirmación. Coloque su nombre y apellido luego sobre el boton continuar y complete el formulario"
+      "{{t('faq.answer1')}}",
   },
   {
     question: "¿Cual es la fecha límite para confirmar mi asistencia?",
