@@ -52,7 +52,7 @@ let slides = [
 const router = createHashRouter([
   {
     path: "/",
-    element: <Layout />,
+    element: <App />,
     children: [
       {
         index: true,

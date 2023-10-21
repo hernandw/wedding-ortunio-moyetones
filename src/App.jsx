@@ -2,7 +2,12 @@ import './App.css'
 
 const App = () => {
   return (
-    <div className="px-5 pt-40">
+    <div className="px-5 pt-20">
+      <div className="text-center names">
+        <p>Karina Moyetones</p>
+        <p>&</p>
+        <p>Manuel Ortunio</p>
+      </div>
       <div className="acceso">
         <p className="p-4">
           por favor ingresa el código que se te entregó en la invitación
