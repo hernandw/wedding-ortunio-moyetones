@@ -53,7 +53,7 @@ const router = createHashRouter([
     children: [
       {
         index: true,
-        element: <Layout />,
+        element: <Home />,
       },
       {
         path: "/home",

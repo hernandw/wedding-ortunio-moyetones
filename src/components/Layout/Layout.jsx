@@ -3,6 +3,7 @@ import NavBar from "../NavBar/NavBar";
 import Nav from "../Nav/Nav";
 import { Outlet } from "react-router-dom";
 import { useState } from "react";
+import Footer from "../Footer/Footer";
 
 const Layout = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -14,10 +15,11 @@ const Layout = () => {
     }, 3000)
   }
   return (
-    <div className="flex flex-col min-h-screen relative">
+    <div className="relative flex flex-col min-h-screen">
       <NavBar toggleMenu={toggleMenu} />
       {isOpen && <Nav setIsOpen={setIsOpen}/>}
       <Outlet />
+      <Footer />
     </div>
   );
 };

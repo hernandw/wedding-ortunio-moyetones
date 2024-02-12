@@ -1,4 +1,4 @@
-import manu from "/assets/images/manu1.jpg";
+
 import "./Home.css";
 import { useTranslation } from "react-i18next";
 
@@ -6,11 +6,11 @@ import { useTranslation } from "react-i18next";
 const Home = () => {
   const { t } = useTranslation();
   return (
-    <div className="bg-cyan-200">
-      <div>
-        <img className="img-home" src={manu} alt="" />
+    <div className=" bg-cyan-300">
+      <div id="banner">
+        
       </div>
-      <div className="pt-12 text-center names">
+      <div className="pt-16 text-center names">
         <p>Karina Moyetones</p>
         <p>&</p>
         <p>Manuel Ortunio</p>

@@ -6,6 +6,24 @@
   box-sizing: border-box;
 }
 
+:root {
+  --tw-bg-opacity: 1;
+}
+body {
+  background-color: rgb(103 232 249 / var(--tw-bg-opacity));
+  
+  margin: 0 auto;
+}
+
+#banner {
+background-image: url('./../public/assets/images/fondo.jpg');
+height:400px;
+
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
 img {
   max-width: 100%;
   margin: 0 auto;
@@ -32,6 +50,7 @@ img {
   .img-home {
     padding-top: 50px;
     width: 600px;
+    height: 400px;
   }
 
   .date {
@@ -39,4 +58,31 @@ img {
     line-height: 2.5rem;
   }
 
+}
+
+@media (min-width: 768px) {
+  #banner {
+    height: 500px;
+    
+  }
+}
+
+@media (min-width: 1024px) {
+  #banner {
+    height: 500px;
+    background-position: center 85%;
+    
+    
+     
+
+  }
+}
+
+@media (min-width: 1280px) {
+  #banner {
+    height: 450px;
+    background-size: 1260px;
+    
+  
+  }
 }

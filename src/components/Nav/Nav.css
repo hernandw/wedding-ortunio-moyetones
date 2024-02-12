@@ -17,6 +17,15 @@
     font-family: 'Playfair Display', serif;
 }
 
+a {
+    margin-right: 15px;
+}
+
+@media (min-width: 1200px) {
+   nav{
+       padding-right: 50px;
+   }
+}
 
     
 

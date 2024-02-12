@@ -12,16 +12,16 @@ import PropTypes from "prop-types";
 const NavBar = ({ toggleMenu }) => {
   const { i18n, t } = useTranslation();
   return (
-    <nav className="flex flex-wrap items-center justify-between p-2 bg-cyan-600">
+    <nav className="flex items-center justify-between p-2 bg-cyan-600">
       <Link to="/">
         <img className="logo" src={logo} alt="" />
       </Link>
-      <div className="flex gap-3 sm:gap-5">
+      {/* <div className="flex gap-3 sm:gap-5">
         <img onClick={()=> i18n.changeLanguage("es")} className="flags" src={es} alt="" />
         <img onClick={()=> i18n.changeLanguage("en")} className="flags" src={en} alt="" />
         <img onClick={()=> i18n.changeLanguage("de")} className="flags" src={de} alt="" />
       </div>
-
+ */}
       <div className="block md:hidden" onClick={toggleMenu}>
         <button className="flex items-center px-3 py-2 text-teal-200 border border-teal-400 rounded hover:text-white hover:border-white">
           <svg
@@ -34,7 +34,7 @@ const NavBar = ({ toggleMenu }) => {
           </svg>
         </button>
       </div>
-      <div className="items-center hidden px-10 space-x-4 menu-items md:block">
+      <div className="hidden pl-10 menu-items md:block">
         <Link to="/home" className="text-white hover:text-gray-300">
           {t('home.home')}
         </Link>
@@ -60,6 +60,6 @@ const NavBar = ({ toggleMenu }) => {
 
 NavBar.propTypes = {
   toggleMenu: PropTypes.func.isRequired,
-}
+} 
 
 export default NavBar

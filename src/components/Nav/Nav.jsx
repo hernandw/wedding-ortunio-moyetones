@@ -7,7 +7,7 @@ const Nav = ({ setIsOpen }) => {
   const ocultarModal = () => {
     setIsOpen(false);
     setTimeout(() => {
-      console.log('... desapareciendo')
+      
     }, 500);
   };
   return (
